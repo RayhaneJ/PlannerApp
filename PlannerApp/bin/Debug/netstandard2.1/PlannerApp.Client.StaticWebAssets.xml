@@ -1,0 +1,4 @@
+﻿<StaticWebAssets Version="1.0">
+  <ContentRoot BasePath="/" Path="C:\Users\rji8\Documents\Visual Studio 2019\Projects\PlannerApp\PlannerApp\bin\Debug\netstandard2.1\wwwroot\" />
+  <ContentRoot BasePath="_content/Radzen.Blazor" Path="C:\Users\rji8\.nuget\packages\radzen.blazor\3.1.9\build\..\staticwebassets\" />
+</StaticWebAssets>

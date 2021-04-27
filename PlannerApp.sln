@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlannerApp.Client", "PlannerApp\PlannerApp.Client.csproj", "{93218ECC-5C30-4F57-9AA8-79D4B40F2EDD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlannerApp.Shared", "PlannerApp.Shared\PlannerApp.Shared.csproj", "{1B97C624-BAAE-45A3-A0CC-3F0A2EDBDF78}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{93218ECC-5C30-4F57-9AA8-79D4B40F2EDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93218ECC-5C30-4F57-9AA8-79D4B40F2EDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93218ECC-5C30-4F57-9AA8-79D4B40F2EDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93218ECC-5C30-4F57-9AA8-79D4B40F2EDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B97C624-BAAE-45A3-A0CC-3F0A2EDBDF78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B97C624-BAAE-45A3-A0CC-3F0A2EDBDF78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B97C624-BAAE-45A3-A0CC-3F0A2EDBDF78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B97C624-BAAE-45A3-A0CC-3F0A2EDBDF78}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FD809331-2D5B-4C17-B412-455471A5200F}
+	EndGlobalSection
+EndGlobal

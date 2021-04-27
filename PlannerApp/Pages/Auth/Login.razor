@@ -1,0 +1,80 @@
+﻿@page "/auth/login"
+
+@layout AuthLayout
+@using PlannerApp.Shared.Models
+
+@inject AuthenticationService authService
+@inject NavigationManager navigationManager
+@inject ILocalStorageService storageService
+
+<div class="row">
+    <div class="col-12">
+        <h2>Login to your account</h2>
+        <EditForm Model="loginRequest" OnValidSubmit="LoginUser">
+            <RadzenCard>
+                <AlertMessage Message="@message" MessageType="@messageType" />
+
+                <ul>
+                    @*@foreach (var item in userInfo)
+                    {
+                        <li>@item.Key : @item.Value</li>
+                    }*@
+                </ul>
+
+                <DataAnnotationsValidator />
+                <ValidationSummary />
+
+                <label>Email Name</label>
+                <Radzen.Blazor.RadzenTextBox @bind-Value="loginRequest.Email"></Radzen.Blazor.RadzenTextBox>
+
+                <label>Password</label>
+                <Radzen.Blazor.RadzenPassword @bind-Value="loginRequest.Password"></Radzen.Blazor.RadzenPassword>
+
+                <hr />
+                <Radzen.Blazor.RadzenButton ButtonType="Radzen.ButtonType.Submit" Text="Login"
+                                            ButtonStyle="Radzen.ButtonStyle.Primary" class="btn-block mr-2" Disabled="isBusy" />
+                <Radzen.Blazor.RadzenButton ButtonType="Radzen.ButtonType.Submit" Text="Register"
+                                            ButtonStyle="Radzen.ButtonStyle.Secondary" class="btn-block mr-2" Disabled="isBusy" Click="GoToRegister" />
+            </RadzenCard>
+        </EditForm>
+    </div>
+</div>
+
+@code {
+    LoginRequest loginRequest = new LoginRequest();
+    AlertMessageType messageType = AlertMessageType.Success;
+    string message = string.Empty;
+    bool isBusy;
+
+    public async Task LoginUser()
+    {
+        isBusy = true;
+        var response = await authService.LoginUserAsync(loginRequest);
+        if (response.IsSuccess)
+        {
+            message = "Welcome to Planner App";
+            messageType = AlertMessageType.Success;
+
+            var userInfo = new LocalUserInfo()
+            {
+                AccessToken = response.Message,
+                Email = response.UserInfo["Email"],
+                FirstName = response.UserInfo["FirstName"],
+                LastName = response.UserInfo["LastName"],
+                Id = response.UserInfo[System.Security.Claims.ClaimTypes.NameIdentifier],
+            };
+            await storageService.SetItemAsync<LocalUserInfo>("User", userInfo);
+        }
+        else
+        {
+            message = response.Message;
+            messageType = Models.AlertMessageType.Error;
+        }
+        isBusy = false;
+    }
+
+    public void GoToRegister()
+    {
+        navigationManager.NavigateTo("/auth/register");
+    }
+}

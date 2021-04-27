@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "NY+3hjr4Pv0mr85gKr51ehkwBHVRF4MeiEd5GczPrzZF5WQw0SPWQgvuLENGwe/Suk4a17Ra2wUpjbvI7J0TYg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\rji8\\Documents\\Visual Studio 2019\\Projects\\PlannerApp\\PlannerApp.Shared\\PlannerApp.Shared.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\rji8\\.nuget\\packages\\aksoftware.webapi\\3.0.1\\aksoftware.webapi.3.0.1.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
+    "C:\\Users\\rji8\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
